@@ -74,7 +74,7 @@ public:
 	afx_msg void OnSetcolor();
 	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
 	void Move(CPoint* point, int x, int y);
-	void EdgeMarkFill(CDC* pDC, COLORREF color);
+	void EdgeMarkFill(CDC* pDC);
 private:
 	void Pattern();
 };

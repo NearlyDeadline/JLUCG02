@@ -225,7 +225,7 @@ void CMFCDemoView::OnLButtonDblClk(UINT nFlags, CPoint point)
 		}
 		p2 = obj->points.GetAt(0);
 		DDALine(pDC, p1.x, p1.y, p2.x, p2.y, RGB(r, g, b));
-		EdgeMarkFill(pDC, RGB(r, g, b));
+		EdgeMarkFill(pDC);
 		pointList.RemoveAll();
 	}
 
@@ -341,7 +341,7 @@ void CMFCDemoView::Move(CPoint* point, int x, int y)
 }
 
 
-void CMFCDemoView::EdgeMarkFill(CDC* pDC, COLORREF color)
+void CMFCDemoView::EdgeMarkFill(CDC* pDC)
 {
 	Pattern();
 	if (pointList.GetSize() <= 2)
